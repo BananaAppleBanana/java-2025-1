@@ -67,6 +67,25 @@ class MyStream {
  * 9. what is ConcurrentModificationException
  * 10. how to create customized annotation
  * 11. memory leak and out of memory error
+ *      young gen   minor gc
+ *      old   gen   major gc
+ *      full gc = minor gc + major gc
+ *
+ *      out of memory error
+ *      1. restart app
+ *      2. assign more area to young / old gen
+ *          java -jar xx --XMS=....
+ *      3. check memory leak -> check "heap dump"
+ *          JProfiler
+ *          Java mission control
+ *          Memory Analyzer
+ *      4. SoftReference
+ *         WeakReference
+ *         PhantomReference + Reference Queue
+ *
+ * 12. why java pass by value not reference
+ *      public void dfs(Map<...> object)
+ *
  */
 
 
